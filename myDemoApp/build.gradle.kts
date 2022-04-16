@@ -19,10 +19,6 @@ dependencies {
     testImplementation("org.testng:testng:7.4.0")
 }
 
-extensions.findByName("buildScan")?.withGroovyBuilder {
-    setProperty("termsOfServiceUrl", "https://gradle.com/terms-of-service")
-    setProperty("termsOfServiceAgree", "yes")
-}
 
 repositories {
     mavenCentral()
@@ -37,3 +33,4 @@ defaultTasks("test")
 tasks.getByName<Test>("test") {
     useTestNG()
 }
+
