@@ -7,12 +7,19 @@ package hello;
 public class Greeter {
   private String name = "";
 
+  /**
+   * Standard comment.
+   * @return name
+  */
   public String getName()
-
   {
     return name;
   }
 
+  /**
+   * Standard comment.
+   * @param name name
+  */
 
   public void setName(String name)
   {
@@ -26,7 +33,7 @@ public class Greeter {
 
   public String sayHello()
   {
-    if (name == "")
+    if (name.equals(""))
     {
       return "Hello!";
     }
