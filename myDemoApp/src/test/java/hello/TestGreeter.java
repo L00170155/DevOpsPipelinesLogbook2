@@ -14,7 +14,7 @@ public class TestGreeter {
 
 
   @Test
-  public void testGreeterEmpty() throws Exception {
+  public void testGreeterEmpty() {
     setUp();
     Assert.assertEquals(g.getName(),"");
     Assert.assertEquals(g.sayHello(),"Hello!");
@@ -29,10 +29,10 @@ public class TestGreeter {
   }
 
   @Test
-  public void newtestWMGreeterPass() {
-    g.setName("Boris");
-    Assert.assertEquals(g.getName(),"Boris");
-    Assert.assertEquals(g.sayHello(),"Hello Boris!");
+  public void testGreeterNotBrian() {
+    g.setName("NotBrian");
+    Assert.assertNotEquals(g.getName(),"Brian");
+    Assert.assertNotEquals(g.sayHello(),"Hello Brian!");
   }
 
 }
